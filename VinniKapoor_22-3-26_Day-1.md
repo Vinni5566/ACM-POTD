@@ -63,7 +63,7 @@ public:
 
 ## 📸 Proof of Submission
 
-![alt text](<Screenshot 2026-03-22 023549.png>)
+![alt text](screenshots/day-1.png)
 
 ---
 
