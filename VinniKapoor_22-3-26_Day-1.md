@@ -27,7 +27,7 @@ Since the array is already **sorted**, duplicates will always be adjacent.
 
 ---
 
-## ⚙️ Complexity
+## Complexity
 
 * **Time Complexity:** O(n)
 * **Space Complexity:** O(1) (in-place)
@@ -61,7 +61,7 @@ public:
 
 ---
 
-## 📸 Proof of Submission
+## Proof of Submission
 
 ![alt text](screenshots/day-1.png)
 
