@@ -24,13 +24,26 @@ This repository contains my daily solutions for the ACM POTD (Problem of the Day
 ```
 ACM-POTD/ 
 │ 
-├── README.md 
+├── README.md
+├── Advanced/ 
+│        ├── Pixiu_22-03-26_Day-1.md 
+|        ├── Pixiu_23-03-26_Day-2.md
+├── Beginner/ 
+│        ├── Pixiu_22-03-26_Day-1.md 
+|        ├── Pixiu_23-03-26_Day-2.md
+├── Intermediate/ 
+│        ├── Pixiu_22-03-26_Day-1.md 
+|        ├── Pixiu_23-03-26_Day-2.md
 ├── screenshots/ 
-│        ├── day1.png
-│        ├── day2.png
-│ 
-├── Pixiu_22-03-26_Day-1.md 
-├── Pixiu_23-03-26_Day-2.md
+|          ├── Advanced/ 
+│                  ├── day1.png
+│                  ├── day2.png
+|          ├── Beginner/ 
+│                  ├── day1.png
+│                  ├── day2.png
+|          ├── Intermediate/ 
+│                  ├── day1.png
+│                  ├── day2.png
 ```
 
 ## 📝 File Naming Convention
