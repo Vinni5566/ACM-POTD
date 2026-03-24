@@ -63,7 +63,7 @@ public:
 
 ## Proof of Submission
 
-![alt text](ACM-POTD/screenshots/Beginner/day-1.png)
+![alt text](../screenshots/Beginner/day-1.png)
 
 ---
 
