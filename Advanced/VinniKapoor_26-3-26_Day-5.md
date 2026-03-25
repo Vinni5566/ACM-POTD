@@ -1,40 +1,34 @@
 ## Problem
 
-**Product of Array Except Self (LeetCode 238)**
+**Sliding Window Maximum (LeetCode 239)**
 
-Given an integer array `nums`, return an array `answer` such that  
-`answer[i]` is equal to the product of all the elements of `nums` except `nums[i]`.
+You are given an array of integers `nums` and an integer `k`, representing the size of a sliding window.
 
-Constraints:
-- Must run in **O(n)** time  
-- Cannot use the **division operator**
+The window moves from left to right, one position at a time.  
+Return the maximum value in each window.
 
 ---
 
 ## Approach
 
-Use **Prefix and Suffix products**.
+Use a **Max Heap (Priority Queue)** to track the maximum element in the current window.
 
 ### Logic:
 
-* Create two arrays:
-  - `prefix[i]` → product of all elements before `i`
-  - `suffix[i]` → product of all elements after `i`
-
-* Build prefix array:
-  - `prefix[i] = prefix[i-1] * nums[i-1]`
-
-* Build suffix array:
-  - `suffix[i] = suffix[i+1] * nums[i+1]`
-
-* Final result:
-  - `res[i] = prefix[i] * suffix[i]`
+* Maintain a max heap storing `{value, index}`
+* Traverse the array using a sliding window:
+  - Push current element into heap
+  - When window size reaches `k`:
+    - Remove elements outside the window (`index < i`)
+    - Top of heap gives maximum
+    - Add it to result
+    - Slide window forward
 
 ---
 
 ## Complexity
 
-* **Time Complexity:** O(n)  
+* **Time Complexity:** O(n log n)  
 * **Space Complexity:** O(n)  
 
 ---
@@ -44,28 +38,36 @@ Use **Prefix and Suffix products**.
 ```cpp
 class Solution {
 public:
-    vector<int> productExceptSelf(vector<int>& nums) {
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
 
         int n = nums.size();
 
-        vector<int> prefix(n);
-        prefix[0] = 1;
+        if(n == 1) return {nums[0]};
+        if(k == 1) return nums;
 
-        vector<int> suffix(n);
-        suffix[n-1] = 1;
+        vector<int> res;
 
-        for(int i = 1; i < n; i++) {
-            prefix[i] = prefix[i-1] * nums[i-1];
-        }
+        priority_queue<pair<int, int>> pq;
 
-        for(int i = n-2; i >= 0; i--) {
-            suffix[i] = suffix[i+1] * nums[i+1];
-        }
-        
-        vector<int> res(n);
+        int i = 0;
+        int j = 0;
 
-        for(int i = 0; i < n; i++) {
-            res[i] = prefix[i] * suffix[i];
+        while(j < n) {
+            pq.push({nums[j], j});
+
+            if(j - i + 1 < k) {
+                j++;
+            } else {
+
+                while(pq.top().second < i) {
+                    pq.pop();
+                }
+
+                res.push_back(pq.top().first);
+
+                i++;
+                j++;
+            }
         }
 
         return res;
