@@ -15,7 +15,7 @@ This repository contains my daily solutions for the ACM POTD (Problem of the Day
 
 ## 🔗 Important Links
 
-* POTD Website: https://acmigdtuw-potd.vercel.app/
+* POTD Website: https://acm-test-kohl.vercel.app/event/spring-2026 
 
 ---
 
