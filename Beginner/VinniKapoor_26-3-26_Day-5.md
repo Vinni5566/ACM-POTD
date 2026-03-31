@@ -61,6 +61,6 @@ public:
 
 ## Proof of Submission
 
-![alt text](../screenshots/Beginner/day-5.png)
+![alt text](../screenshots/Beginner/day-05.png)
 
 ---

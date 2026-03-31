@@ -70,6 +70,6 @@ public:
 
 ## Proof of Submission
 
-![alt text](../screenshots/Intermediate/day-2.png)
+![alt text](../screenshots/Intermediate/day-02.png)
 
 ---

@@ -88,6 +88,6 @@ public:
 
 ## Proof of Submission
 
-![alt text](../screenshots/Beginner/day-7.png)
+![alt text](../screenshots/Beginner/day-07.png)
 
 ---
